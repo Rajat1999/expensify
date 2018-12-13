@@ -30,23 +30,6 @@ test('should setup edit expense action object', () => {
 
 });
 
-// test('should setup add expense action (without values)', () => {
-    
-//     const action = expenses.addExpense();
-
-//     expect(action).toEqual({
-//         type: 'ADD_EXPENSE',
-//         expense: {
-//             id: expect.any(String),
-//             description: '',
-//             note: '',
-//             amount: 0,
-//             createdAt: 0
-//         }
-//     });
-
-// });
-
 test('should setup add expense action (with values)', () => {
     
     const action = expenses.addExpense(expensesData[2]);
@@ -81,11 +64,11 @@ test('should add expense to database and store', (done) => {
             }
         });
 
-        return database.ref(`expenses/${actions[0].expense.id}`).once('value');
-
-    }).then((snapshot) => {
+        database.ref(`expenses/${actions[0].expense.id}`).once('value').then((snapshot) => {
             expect(snapshot.val()).toEqual(expense);
             done();
+        });
+
     });
 
 });
