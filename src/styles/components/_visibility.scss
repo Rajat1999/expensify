@@ -1,0 +1,18 @@
+.show-for-mobile{
+
+    display: none;
+
+    @media (max-width: 37.5em){
+        display: inline-block;
+    }
+}
+
+.show-for-desktop{
+
+    display: inline-block;
+
+    @media (max-width: 37.5em){
+        display: none;
+    }
+
+}

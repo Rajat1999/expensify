@@ -1,0 +1,23 @@
+.button{
+
+    border: none;
+    margin: none;
+    outline: none;
+    display: inline-block;
+
+    background-color: $blue;
+        color: white;
+        padding: $s-size;
+        font-weight: 300;
+        font-size: $font-size-large;
+        line-height: 1;
+        text-decoration: none;
+
+    &--inverted{
+        background: none;
+    }
+}
+
+.button--secondary{
+    background: #888;
+}

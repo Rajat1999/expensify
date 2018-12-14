@@ -1,0 +1,23 @@
+.input-group{
+
+    display: flex;
+    margin-bottom: $l-size;
+    justify-content: space-between;
+
+    @media (max-width: 37.5em) {
+
+        flex-direction: column;
+        margin-bottom: $m-size;
+        align-items: center;
+
+    }
+    
+    &__item{
+
+        @media (max-width: 37.5em) {
+
+            margin-bottom: $m-size;
+        }
+    }
+
+}

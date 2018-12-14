@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    flex-direction: column;
+
+    & > *{
+        margin-bottom: $m-size;
+    }
+
+    &__error{
+
+        margin: 0 0 $m-size 0;
+        font-style: italic;
+        text-align: center;
+
+    }
+
+    button{
+        align-self: flex-start;
+    }
+
+}
